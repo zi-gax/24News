@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar storm could bring auroras farther south over the US than they typically appear</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">24 News</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Course Content Section -->
+    <div class="container mt-5 pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="mb-4">Solar storm could bring auroras farther south over the US than they typically appear
+                </h1>
+                <img src="/static/images/Solarstorm.png" class="img-fluid mb-4"
+                    alt="Solar storm could bring auroras farther south over the US than they typically appear ">
+            </div>
+            <div class="col-md-6">
+                <h3>Summary</h3>
+                <p>A strong G3-level geomagnetic storm, triggered by recent coronal mass ejections from the sun, is
+                    expected to produce spectacular northern lights visible across parts of the U.S. this week. The
+                    auroras may be seen as far south as New York and Pennsylvania, with the best viewing opportunities
+                    in Alaska, the Pacific Northwest, and the Midwest. This increased auroral activity is due to the sun
+                    reaching its solar maximum, the peak of its 11-year cycle. While offering stunning visuals, such
+                    solar storms can also disrupt radio, GPS, and power systems. For optimal viewing, experts recommend
+                    finding dark, north-facing locations away from city lights between 10 p.m. and 2 a.m.​
+                </p>
+
+                <h3>Highlights</h3>
+                <ul>
+                    <li>G3-level solar storm is causing spectacular northern lights, visible unusually far south, even
+                        in parts of New York and Pennsylvania.</li>
+                    <li>The event is linked to the sun’s solar maximum, increasing geomagnetic activity and auroral
+                        displays.</li>
+                    <li>While beautiful, the storm may disrupt GPS, radio signals, and power systems — caution is
+                        advised.
+                    </li>
+                </ul>
+
+                <button id="readbt" class="btn btn-primary mt-4">Read News</button>
+                <div id="readmes" class="alert alert-success mt-4" style="display:none;">
+                    <strong>Added!</strong> You have successfully read the Solar storm could bring auroras farther south
+                    over the US than they typically appear.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2025 24 NEWS</p>
+    </footer>
+
+    <!-- Register Script -->
+    <script>
+        document.getElementById('readbt').addEventListener('click', function () {
+            document.getElementById('readmes').style.display = 'block';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

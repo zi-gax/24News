@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">24 News</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="pages/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>
+                </ul>
+                <div class="search-box" style=" padding-left:20px;">
+                    <button class=" btn-search"><i class="fa fa-search"></i></button>
+                    <input type="text" id="search" class="input-search" placeholder="Type to Search...">
+                </div>
+                <!-- <input type="text" id="search" class="form-control " style="width: 300px; margin-left:30px;" -->
+                <!-- placeholder="Search News..."> -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+        <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;">Today News</h1>
+        <div class="row" id="News-list">
+            <!-- News Cards -->
+            <div class="col-md-4 mb-4 News"
+                data-name="Fed chair says Trump’s turbulent trade war could put the central bank in a situation it hasn’t seen in decades">
+                <a href="pages/Trumps.html">
+                    <div class="card">
+                        <img src="/static/images/Trumps.png" class="card-img-top"
+                            alt="Fed chair says Trump’s turbulent trade war could put the central bank in a situation it hasn’t seen in decades">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Fed chair says Trump’s turbulent trade war could put the central bank in a situation it
+                                hasn’t seen in decades
+                            </h5>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 News"
+                data-name="From Lady Gaga to Paris Hilton, these were the unforgettable looks at Coachella">
+                <a href="pages/LadyGaga.html">
+                    <div class="card">
+                        <img src="/static/images/LadyGaga.png" class="card-img-top"
+                            alt="From Lady Gaga to Paris Hilton, these were the unforgettable looks at Coachella">
+                        <div class="card-body">
+                            <h5 class="card-title">From Lady Gaga to Paris Hilton, these were the unforgettable looks at
+                                Coachella</h5>
+                        </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4 News"
+            data-name="Solar storm could bring auroras farther south over the US than they typically appear ">
+            <a href="pages/Solarstorm.html">
+                <div class="card">
+                    <img src="/static/images/Solarstorm.png" class="card-img-top"
+                        alt="Solar storm could bring auroras farther south over the US than they typically appear ">
+                    <div class="card-body">
+                        <h5 class="card-title">Solar storm could bring auroras farther south over the US than they
+                            typically
+                            appear </h5>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    </div>
+
+    <!-- Search Script -->
+    <script>
+        document.getElementById('search').addEventListener('keyup', function () {
+            let filter = this.value.toLowerCase();
+            document.querySelectorAll('.News').forEach(News => {
+                let name = News.getAttribute('data-name').toLowerCase();
+                News.style.display = name.includes(filter) ? '' : 'none';
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
