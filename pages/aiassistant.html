@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>AI Assistant Revolution - 24 News</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/static/css/styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="/index.html">
+            <i class="fa fa-newspaper-o me-2"></i>24 News
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                     data-bs-toggle="dropdown">
+                     <i class="fa fa-th-large me-1"></i>Categories
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-globe me-2"></i>World</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-flask me-2"></i>Science</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-briefcase me-2"></i>Business</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-music me-2"></i>Entertainment</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-heartbeat me-2"></i>Health</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/pages/about.html">
+                     <i class="fa fa-info-circle me-1"></i>About Us
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/pages/contact.html">
+                     <i class="fa fa-envelope me-1"></i>Contact Us
+                  </a>
+               </li>
+            </ul>
+            <div class="dropdown">
+               <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown"
+                  data-bs-toggle="dropdown">
+                  <i class="fa fa-user me-1"></i>Account
+               </button>
+               <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle me-2"></i>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-bookmark me-2"></i>Saved Articles</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-cog me-2"></i>Settings</a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out me-2"></i>Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Main Content -->
+   <div class="container mt-5 pt-5">
+      <article class="news-article">
+         <h1 class="text-center mb-4">Tech Giant Unveils Revolutionary AI-Powered Personal Assistant</h1>
+
+         <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+               <img src="/static/images/aiassistant.png" class="img-fluid rounded" alt="AI Assistant Interface">
+               <p class="text-muted text-center mt-2">Image: The new AI assistant interface showcasing its capabilities
+               </p>
+            </div>
+         </div>
+
+         <div class="row justify-content-center">
+            <div class="col-md-8">
+               <p class="lead">A leading technology company has announced the launch of "Aura," a groundbreaking
+                  AI-powered personal assistant that promises to revolutionize how we interact with technology in our
+                  daily lives.</p>
+
+               <h2 class="mt-4">Key Features</h2>
+               <p>Aura sets itself apart with several innovative capabilities:</p>
+               <ul>
+                  <li>Advanced natural language understanding</li>
+                  <li>Contextual awareness and learning</li>
+                  <li>Seamless integration across devices</li>
+                  <li>Personalized task automation</li>
+                  <li>Enhanced privacy controls</li>
+               </ul>
+
+               <h2 class="mt-4">Industry Impact</h2>
+               <p>"This represents a significant leap forward in AI technology," said Dr. Sarah Johnson, AI researcher
+                  at Stanford University. "The level of personalization and understanding demonstrated by Aura could
+                  fundamentally change how we interact with our devices."</p>
+
+               <h2 class="mt-4">Availability and Pricing</h2>
+               <p>The company has announced that Aura will be available in three tiers:</p>
+               <ul>
+                  <li>Basic: Free with limited features</li>
+                  <li>Pro: $9.99/month with full feature set</li>
+                  <li>Enterprise: Custom pricing for businesses</li>
+               </ul>
+
+               <h2 class="mt-4">Future Developments</h2>
+               <p>The company has outlined an ambitious roadmap for Aura, including:</p>
+               <ul>
+                  <li>Integration with smart home devices</li>
+                  <li>Advanced health monitoring features</li>
+                  <li>Enhanced business productivity tools</li>
+                  <li>Multilingual support expansion</li>
+               </ul>
+
+               <div class="article-meta mt-4">
+                  <p class="text-muted">Published: March 16, 2024</p>
+                  <p class="text-muted">Author: Sarah Johnson</p>
+               </div>
+            </div>
+         </div>
+      </article>
+   </div>
+
+   <!-- Include Footer -->
+   <div id="footer-placeholder"></div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+      // Load footer
+      fetch('/static/components/footer.html')
+         .then(response => response.text())
+         .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+         });
+   </script>
+</body>
+
+</html>

@@ -4,88 +4,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar storm could bring auroras farther south over the US than they typically appear</title>
+    <title>Solar Storm Phenomenon - 24 News</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            padding-top: 50px;
-            background-color: rgb(20, 20, 20);
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">24 News</a>
+            <a class="navbar-brand" href="/index.html">
+                <i class="fa fa-newspaper-o me-2"></i>24 News
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            <i class="fa fa-th-large me-1"></i>Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-globe me-2"></i>World</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-flask me-2"></i>Science</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-briefcase me-2"></i>Business</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-music me-2"></i>Entertainment</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-heartbeat me-2"></i>Health</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/about.html">
+                            <i class="fa fa-info-circle me-1"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/contact.html">
+                            <i class="fa fa-envelope me-1"></i>Contact Us
+                        </a>
+                    </li>
                 </ul>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown"
+                        data-bs-toggle="dropdown">
+                        <i class="fa fa-user me-1"></i>Account
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle me-2"></i>Profile</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-bookmark me-2"></i>Saved Articles</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-cog me-2"></i>Settings</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out me-2"></i>Logout</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Course Content Section -->
+    <!-- Main Content -->
     <div class="container mt-5 pt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <h1 class="mb-4">Solar storm could bring auroras farther south over the US than they typically appear
-                </h1>
-                <img src="/static/images/Solarstorm.png" class="img-fluid mb-4"
-                    alt="Solar storm could bring auroras farther south over the US than they typically appear ">
-            </div>
-            <div class="col-md-6">
-                <h3>Summary</h3>
-                <p>A strong G3-level geomagnetic storm, triggered by recent coronal mass ejections from the sun, is
-                    expected to produce spectacular northern lights visible across parts of the U.S. this week. The
-                    auroras may be seen as far south as New York and Pennsylvania, with the best viewing opportunities
-                    in Alaska, the Pacific Northwest, and the Midwest. This increased auroral activity is due to the sun
-                    reaching its solar maximum, the peak of its 11-year cycle. While offering stunning visuals, such
-                    solar storms can also disrupt radio, GPS, and power systems. For optimal viewing, experts recommend
-                    finding dark, north-facing locations away from city lights between 10 p.m. and 2 a.m.​
-                </p>
+        <article class="news-article">
+            <h1 class="text-center mb-4">Solar Storm Could Bring Auroras Farther South Over the US Than They Typically
+                Appear</h1>
 
-                <h3>Highlights</h3>
-                <ul>
-                    <li>G3-level solar storm is causing spectacular northern lights, visible unusually far south, even
-                        in parts of New York and Pennsylvania.</li>
-                    <li>The event is linked to the sun’s solar maximum, increasing geomagnetic activity and auroral
-                        displays.</li>
-                    <li>While beautiful, the storm may disrupt GPS, radio signals, and power systems — caution is
-                        advised.
-                    </li>
-                </ul>
-
-                <button id="readbt" class="btn btn-primary mt-4">Read News</button>
-                <div id="readmes" class="alert alert-success mt-4" style="display:none;">
-                    <strong>Added!</strong> You have successfully read the Solar storm could bring auroras farther south
-                    over the US than they typically appear.
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-8">
+                    <img src="/static/images/Solarstorm.png" class="img-fluid rounded" alt="Solar Storm Aurora">
+                    <p class="text-muted text-center mt-2">Image: Aurora borealis visible during a solar storm</p>
                 </div>
             </div>
-        </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <p class="lead">A powerful solar storm is expected to create spectacular aurora displays across the
+                        United States, potentially making the northern lights visible much farther south than usual.</p>
+
+                    <h2 class="mt-4">Solar Activity</h2>
+                    <p>Scientists have detected a significant coronal mass ejection (CME) from the sun that is expected
+                        to reach Earth's atmosphere. This event could result in:</p>
+                    <ul>
+                        <li>Enhanced aurora visibility across northern states</li>
+                        <li>Potential visibility as far south as New York and Chicago</li>
+                        <li>Increased geomagnetic activity</li>
+                        <li>Possible minor impacts on satellite communications</li>
+                    </ul>
+
+                    <h2 class="mt-4">Viewing Opportunities</h2>
+                    <p>For optimal viewing of the auroras, experts recommend:</p>
+                    <ul>
+                        <li>Finding locations away from city lights</li>
+                        <li>Looking toward the northern horizon</li>
+                        <li>Using a camera with long exposure settings</li>
+                        <li>Checking local weather conditions</li>
+                    </ul>
+
+                    <h2 class="mt-4">Scientific Significance</h2>
+                    <p>"This event provides a unique opportunity to study the interaction between solar particles and
+                        Earth's magnetic field," said Dr. Emily Rodriguez, space weather researcher at NASA. "It also
+                        offers a rare chance for people in more southern latitudes to witness this natural phenomenon."
+                    </p>
+
+                    <h2 class="mt-4">Safety and Impact</h2>
+                    <p>While the solar storm is expected to be moderate, authorities have issued some precautions:</p>
+                    <ul>
+                        <li>Minor GPS disruptions possible</li>
+                        <li>Potential for brief radio blackouts</li>
+                        <li>No significant threat to power grids expected</li>
+                        <li>Safe to view with the naked eye</li>
+                    </ul>
+
+                    <div class="article-meta mt-4">
+                        <p class="text-muted">Published: March 12, 2024</p>
+                        <p class="text-muted">Author: Dr. Emily Rodriguez</p>
+                    </div>
+                </div>
+            </div>
+        </article>
     </div>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>&copy; 2025 24 NEWS</p>
-    </footer>
-
-    <!-- Register Script -->
-    <script>
-        document.getElementById('readbt').addEventListener('click', function () {
-            document.getElementById('readmes').style.display = 'block';
-        });
-    </script>
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load footer
+        fetch('/static/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

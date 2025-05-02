@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Deep Sea Discovery - 24 News</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/static/css/styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="/index.html">
+            <i class="fa fa-newspaper-o me-2"></i>24 News
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                     data-bs-toggle="dropdown">
+                     <i class="fa fa-th-large me-1"></i>Categories
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-globe me-2"></i>World</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-flask me-2"></i>Science</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-briefcase me-2"></i>Business</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-music me-2"></i>Entertainment</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-heartbeat me-2"></i>Health</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/pages/about.html">
+                     <i class="fa fa-info-circle me-1"></i>About Us
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/pages/contact.html">
+                     <i class="fa fa-envelope me-1"></i>Contact Us
+                  </a>
+               </li>
+            </ul>
+            <div class="dropdown">
+               <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown"
+                  data-bs-toggle="dropdown">
+                  <i class="fa fa-user me-1"></i>Account
+               </button>
+               <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle me-2"></i>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-bookmark me-2"></i>Saved Articles</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-cog me-2"></i>Settings</a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out me-2"></i>Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Main Content -->
+   <div class="container mt-5 pt-5">
+      <article class="news-article">
+         <h1 class="text-center mb-4">Scientists Discover New Species of Deep-Sea Creatures in the Mariana Trench</h1>
+
+         <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+               <img src="/static/images/deepsea.png" class="img-fluid rounded" alt="Deep sea creatures">
+               <p class="text-muted text-center mt-2">Image: Newly discovered deep-sea species in the Mariana Trench</p>
+            </div>
+         </div>
+
+         <div class="row justify-content-center">
+            <div class="col-md-8">
+               <p class="lead">A team of marine biologists has made a groundbreaking discovery in the depths of the
+                  Mariana Trench, uncovering several previously unknown species of deep-sea creatures.</p>
+
+               <h2 class="mt-4">The Discovery</h2>
+               <p>Using advanced deep-sea exploration technology, scientists from the Ocean Exploration Institute have
+                  identified at least five new species of marine life in the deepest part of the world's oceans. The
+                  discovery was made during a month-long expedition using remotely operated vehicles (ROVs) equipped
+                  with high-definition cameras and sampling equipment.</p>
+
+               <h2 class="mt-4">New Species</h2>
+               <p>Among the newly discovered species are:</p>
+               <ul>
+                  <li>A bioluminescent jellyfish with unique tentacle patterns</li>
+                  <li>A deep-sea snail with a transparent shell</li>
+                  <li>An unknown species of anglerfish with distinctive light patterns</li>
+                  <li>Two new species of deep-sea crustaceans</li>
+               </ul>
+
+               <h2 class="mt-4">Scientific Significance</h2>
+               <p>"This discovery is significant not only because we've found new species, but because these creatures
+                  have adapted to survive in one of the most extreme environments on Earth," said Dr. Sarah Chen, lead
+                  researcher on the expedition. "Studying these organisms could provide valuable insights into evolution
+                  and survival in extreme conditions."</p>
+
+               <h2 class="mt-4">Future Research</h2>
+               <p>The team plans to return to the Mariana Trench for further study of these new species. They hope to
+                  learn more about their biology, behavior, and potential applications in medicine and technology.</p>
+
+               <div class="article-meta mt-4">
+                  <p class="text-muted">Published: March 15, 2024</p>
+                  <p class="text-muted">Author: Dr. James Wilson</p>
+               </div>
+            </div>
+         </div>
+      </article>
+   </div>
+
+   <!-- Include Footer -->
+   <div id="footer-placeholder"></div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+      // Load footer
+      fetch('/static/components/footer.html')
+         .then(response => response.text())
+         .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+         });
+   </script>
+</body>
+
+</html>

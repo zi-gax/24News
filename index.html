@@ -8,87 +8,170 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="static/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        body {
-            padding-top: 50px;
-            background-color: rgb(20, 20, 20);
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">24 News</a>
+            <a class="navbar-brand" href="index.html">
+                <i class="fa fa-newspaper-o me-2"></i>24 News
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="pages/about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="pages/contact.html">Contact Us</a></li>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            <i class="fa fa-th-large me-1"></i>Categories
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-globe me-2"></i>World</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-flask me-2"></i>Science</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-briefcase me-2"></i>Business</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-music me-2"></i>Entertainment</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-heartbeat me-2"></i>Health</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/about.html">
+                            <i class="fa fa-info-circle me-1"></i>About Us
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="pages/contact.html">
+                            <i class="fa fa-envelope me-1"></i>Contact Us
+                        </a>
+                    </li>
                 </ul>
-                <div class="search-box" style=" padding-left:20px;">
-                    <button class=" btn-search"><i class="fa fa-search"></i></button>
-                    <input type="text" id="search" class="input-search" placeholder="Type to Search...">
+                <div class="d-flex align-items-center">
+                    <div class="search-box me-3">
+                        <button class="btn-search"><i class="fa fa-search"></i></button>
+                        <input type="text" id="search" class="input-search" placeholder="Search news...">
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown"
+                            data-bs-toggle="dropdown">
+                            <i class="fa fa-user me-1"></i>Account
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle me-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-bookmark me-2"></i>Saved Articles</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-cog me-2"></i>Settings</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out me-2"></i>Logout</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <!-- <input type="text" id="search" class="form-control " style="width: 300px; margin-left:30px;" -->
-                <!-- placeholder="Search News..."> -->
             </div>
         </div>
     </nav>
 
     <!-- Main Content -->
-    <div class="container mt-4">
-        <h1 class="text-center" style="padding-bottom: 50px;padding-top: 50px;">Today News</h1>
+    <div class="container mt-4 pt-5">
+        <div class="news-header">
+            <div class="header-content">
+                <h1 class="display-4">Today's News</h1>
+                <p class="lead">Stay informed with the latest updates from around the world</p>
+                <div class="header-divider"></div>
+            </div>
+        </div>
         <div class="row" id="News-list">
             <!-- News Cards -->
             <div class="col-md-4 mb-4 News"
-                data-name="Fed chair says Trump’s turbulent trade war could put the central bank in a situation it hasn’t seen in decades">
-                <a href="pages/Trumps.html">
+                data-name="Fed chair says Trump's turbulent trade war could put the central bank in a situation it hasn't seen in decades">
+                <a href="pages/Trumps.html" class="text-decoration-none">
                     <div class="card">
-                        <img src="/static/images/Trumps.png" class="card-img-top"
-                            alt="Fed chair says Trump’s turbulent trade war could put the central bank in a situation it hasn’t seen in decades">
+                        <img src="/static/images/Trump.png" class="card-img-top"
+                            alt="Fed chair says Trump's turbulent trade war could put the central bank in a situation it hasn't seen in decades">
                         <div class="card-body">
-                            <h5 class="card-title">
-                                Fed chair says Trump’s turbulent trade war could put the central bank in a situation it
-                                hasn’t seen in decades
-                            </h5>
+                            <h5 class="card-title">Fed chair says Trump's turbulent trade war could put the central bank
+                                in a situation it hasn't seen in decades</h5>
+                            <p class="card-text text-muted">March 14, 2024</p>
                         </div>
                     </div>
                 </a>
             </div>
             <div class="col-md-4 mb-4 News"
                 data-name="From Lady Gaga to Paris Hilton, these were the unforgettable looks at Coachella">
-                <a href="pages/LadyGaga.html">
+                <a href="pages/LadyGaga.html" class="text-decoration-none">
                     <div class="card">
                         <img src="/static/images/ladygaga.png" class="card-img-top"
                             alt="From Lady Gaga to Paris Hilton, these were the unforgettable looks at Coachella">
                         <div class="card-body">
                             <h5 class="card-title">From Lady Gaga to Paris Hilton, these were the unforgettable looks at
                                 Coachella</h5>
+                            <p class="card-text text-muted">March 13, 2024</p>
                         </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 News"
+                data-name="Solar storm could bring auroras farther south over the US than they typically appear">
+                <a href="pages/Solarstorm.html" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/static/images/Solarstorm.png" class="card-img-top"
+                            alt="Solar storm could bring auroras farther south over the US than they typically appear">
+                        <div class="card-body">
+                            <h5 class="card-title">Solar storm could bring auroras farther south over the US than they
+                                typically appear</h5>
+                            <p class="card-text text-muted">March 12, 2024</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- New Cards -->
+            <div class="col-md-4 mb-4 News"
+                data-name="Scientists discover new species of deep-sea creatures in the Mariana Trench">
+                <a href="pages/deepsea.html" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/static/images/deepsea.png" class="card-img-top"
+                            alt="Scientists discover new species of deep-sea creatures in the Mariana Trench">
+                        <div class="card-body">
+                            <h5 class="card-title">Scientists discover new species of deep-sea creatures in the Mariana
+                                Trench</h5>
+                            <p class="card-text text-muted">March 15, 2024</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 News"
+                data-name="Tech giant announces revolutionary AI-powered personal assistant">
+                <a href="pages/aiassistant.html" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/static/images/aiassistant.png" class="card-img-top"
+                            alt="Tech giant announces revolutionary AI-powered personal assistant">
+                        <div class="card-body">
+                            <h5 class="card-title">Tech giant announces revolutionary AI-powered personal assistant</h5>
+                            <p class="card-text text-muted">March 16, 2024</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4 mb-4 News"
+                data-name="Global climate summit reaches historic agreement on carbon emissions">
+                <a href="pages/climatesummit.html" class="text-decoration-none">
+                    <div class="card">
+                        <img src="/static/images/climatesummit.png" class="card-img-top"
+                            alt="Global climate summit reaches historic agreement on carbon emissions">
+                        <div class="card-body">
+                            <h5 class="card-title">Global climate summit reaches historic agreement on carbon emissions
+                            </h5>
+                            <p class="card-text text-muted">March 17, 2024</p>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
-        <div class="col-md-4 mb-4 News"
-            data-name="Solar storm could bring auroras farther south over the US than they typically appear ">
-            <a href="pages/Solarstorm.html">
-                <div class="card">
-                    <img src="/static/images/Solarstorm.png" class="card-img-top"
-                        alt="Solar storm could bring auroras farther south over the US than they typically appear ">
-                    <div class="card-body">
-                        <h5 class="card-title">Solar storm could bring auroras farther south over the US than they
-                            typically
-                            appear </h5>
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
-    </div>
+
+    <!-- Include Footer -->
+    <div id="footer-placeholder"></div>
 
     <!-- Search Script -->
     <script>
@@ -102,6 +185,14 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Load footer
+        fetch('/static/components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
 </body>
 <script>
     const btnSearch = document.querySelector('.btn-search');
@@ -111,6 +202,5 @@
         inputSearch.focus();
     });
 </script>
-
 
 </html>

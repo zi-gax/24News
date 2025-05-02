@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Climate Summit Agreement - 24 News</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/static/css/styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+   <!-- Navigation Bar -->
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+         <a class="navbar-brand" href="/index.html">
+            <i class="fa fa-newspaper-o me-2"></i>24 News
+         </a>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+               <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                     data-bs-toggle="dropdown">
+                     <i class="fa fa-th-large me-1"></i>Categories
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-globe me-2"></i>World</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-flask me-2"></i>Science</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-briefcase me-2"></i>Business</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-music me-2"></i>Entertainment</a></li>
+                     <li><a class="dropdown-item" href="#"><i class="fa fa-heartbeat me-2"></i>Health</a></li>
+                  </ul>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/pages/about.html">
+                     <i class="fa fa-info-circle me-1"></i>About Us
+                  </a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="/pages/contact.html">
+                     <i class="fa fa-envelope me-1"></i>Contact Us
+                  </a>
+               </li>
+            </ul>
+            <div class="dropdown">
+               <button class="btn btn-outline-light dropdown-toggle" type="button" id="userDropdown"
+                  data-bs-toggle="dropdown">
+                  <i class="fa fa-user me-1"></i>Account
+               </button>
+               <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-user-circle me-2"></i>Profile</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-bookmark me-2"></i>Saved Articles</a></li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-cog me-2"></i>Settings</a></li>
+                  <li>
+                     <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#"><i class="fa fa-sign-out me-2"></i>Logout</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <!-- Main Content -->
+   <div class="container mt-5 pt-5">
+      <article class="news-article">
+         <h1 class="text-center mb-4">Global Climate Summit Reaches Historic Agreement on Carbon Emissions</h1>
+
+         <div class="row justify-content-center mb-4">
+            <div class="col-md-8">
+               <img src="/static/images/climatesummit.png" class="img-fluid rounded" alt="Climate Summit Meeting">
+               <p class="text-muted text-center mt-2">Image: World leaders at the climate summit signing the historic
+                  agreement</p>
+            </div>
+         </div>
+
+         <div class="row justify-content-center">
+            <div class="col-md-8">
+               <p class="lead">After two weeks of intense negotiations, world leaders have reached a groundbreaking
+                  agreement to significantly reduce global carbon emissions, marking a historic moment in the fight
+                  against climate change.</p>
+
+               <h2 class="mt-4">Key Agreement Points</h2>
+               <p>The landmark agreement includes several major commitments:</p>
+               <ul>
+                  <li>50% reduction in global carbon emissions by 2030</li>
+                  <li>Net-zero emissions target by 2050</li>
+                  <li>Increased funding for developing nations</li>
+                  <li>Stricter regulations on industrial emissions</li>
+                  <li>Enhanced monitoring and reporting systems</li>
+               </ul>
+
+               <h2 class="mt-4">Global Response</h2>
+               <p>"This agreement represents a turning point in our collective fight against climate change," said UN
+                  Secretary-General. "The commitments made here today will help secure a sustainable future for
+                  generations to come."</p>
+
+               <h2 class="mt-4">Economic Impact</h2>
+               <p>The agreement is expected to have significant economic implications:</p>
+               <ul>
+                  <li>Creation of millions of green jobs</li>
+                  <li>Investment in renewable energy infrastructure</li>
+                  <li>Transition support for affected industries</li>
+                  <li>New opportunities in sustainable technology</li>
+               </ul>
+
+               <h2 class="mt-4">Next Steps</h2>
+               <p>Countries will now begin implementing their national action plans, with regular progress reviews
+                  scheduled every two years. The agreement also establishes a new international body to oversee
+                  compliance and provide technical assistance.</p>
+
+               <div class="article-meta mt-4">
+                  <p class="text-muted">Published: March 17, 2024</p>
+                  <p class="text-muted">Author: Michael Chen</p>
+               </div>
+            </div>
+         </div>
+      </article>
+   </div>
+
+   <!-- Include Footer -->
+   <div id="footer-placeholder"></div>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+      // Load footer
+      fetch('/static/components/footer.html')
+         .then(response => response.text())
+         .then(data => {
+            document.getElementById('footer-placeholder').innerHTML = data;
+         });
+   </script>
+</body>
+
+</html>
